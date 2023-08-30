@@ -7,16 +7,16 @@ import ToyContainer from "./ToyContainer";
 function App() {
   const [showForm, setShowForm] = useState(false);
 
-  function handleClick() {
-    setShowForm((showForm) => !showForm);
+  function handleAddToy(newToy) {
+    // This can now be passed to the ToyForm to handle new toys
   }
 
   return (
     <>
       <Header />
-      {showForm ? <ToyForm /> : null}
+      {showForm ? <ToyForm onAddToy={handleAddToy} /> : null}
       <div className="buttonContainer">
-        <button onClick={handleClick}>Add a Toy</button>
+        <button onClick={() => setShowForm(prev => !prev)}>Add a Toy</button>
       </div>
       <ToyContainer />
     </>
@@ -24,3 +24,4 @@ function App() {
 }
 
 export default App;
+
