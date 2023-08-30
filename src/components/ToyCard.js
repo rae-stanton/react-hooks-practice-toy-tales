@@ -47,11 +47,9 @@ function ToyCard({ name, likes, image, id, onUpdateToys, onDeleteToys }) {
       <h2>{name}</h2>
       <img src={image} alt={name} className="toy-avatar" />
       <p>{likes} Likes </p>
-      //adds handle for like btn
       <button onClick={handleClickLike} className="like-btn">
         Like {"<3"}
       </button>
-      //adds handling for delete button
       <button onClick={handleDelete} className="del-btn">
         Donate to GoodWill
       </button>
